@@ -111,16 +111,16 @@ current_row = test_df.loc[test_df['name_1'] == group_members[3]]
 member1 = [ group_members[3], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member2 = [ group_members[0], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member2 = [ group_members[0], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member3 = [ group_members[1], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member3 = [ group_members[1], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member4 = [ group_members[2], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member4 = [ group_members[2], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member5 = [ group_members[4], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 member4_series = member1 + member2 + member3 + member4 + member5
 
@@ -144,4 +144,12 @@ member5 = [ group_members[4], current_row['mem5_1'].values[0], current_row['mem5
 member5_series = member1 + member2 + member3 + member4 + member5
 
 
+
+
 # combine these into a dataframe for the whole group
+final_df = pd.DataFrame([member1_series, member2_series, member3_series, member4_series, member5_series],
+                        columns=['Name', 'Section', 'Group', 'mem1_1', 'mem1_2', 'mem1_3', 'mem1_4', 'mem1_5', 'mem1_6', 'mem1_7', 'mem1_8', 
+                                 'Group Member', 'mem2_1', 'mem2_2', 'mem2_3', 'mem2_4', 'mem2_5', 'mem2_6', 'mem2_7', 'mem2_8', 
+                                 'Group Member', 'mem3_1', 'mem3_2', 'mem3_3', 'mem3_4', 'mem3_5', 'mem3_6', 'mem3_7', 'mem3_8', 
+                                 'Group Member', 'mem4_1', 'mem4_2', 'mem4_3', 'mem4_4', 'mem4_5', 'mem4_6', 'mem4_7', 'mem4_8',
+                                 'Group_member', 'mem5_1', 'mem5_2', 'mem5_3', 'mem5_4', 'mem5_5', 'mem5_6', 'mem5_7', 'mem5_8'])
