@@ -1,7 +1,8 @@
 
 import pandas as pd
 
-df = pd.read_csv('/Users/ep9k/Desktop/EmmaZhao.csv')
+#read dataset
+df = pd.read_csv('/Users/ep9k/Desktop/EmmaZhao1.csv')
 
 # #drop unneeded columns
 # columns_to_drop = ['Unnamed: 48','Unnamed: 49','Unnamed: 50','Unnamed: 51','Unnamed: 52','Unnamed: 53','Unnamed: 54','Unnamed: 55','Unnamed: 56','Unnamed: 57',
@@ -21,6 +22,8 @@ groups = df['Group'].unique()
 
 
 
+
+
 def create_df(section, group):
     """ Takes section and group info and creates dataframe from that for each section/group combo"""
 
@@ -32,6 +35,9 @@ def create_df(section, group):
     return final_df
 
 
+
+
+#dfs will be list of dataframes. Each dataframe is each section/group combination for the class (ie: Section 1 Group A, etc...)
 dfs = []
 
 for section in sections:
@@ -51,95 +57,95 @@ group = test_df['Group'].unique()[0]
 
 #group member 1
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member1 = [ group_members[0], section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+member1 = [ f'{group_members[0]} on {group_members[0]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member2 = [ group_members[1], current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+member2 = [ f'{group_members[1]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member3 = [ group_members[2], current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+member3 = [ f'{group_members[2]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[3]]
-member4 = [ group_members[3], current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+member4 = [ f'{group_members[3]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+member5 = [ f'{group_members[4]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
 
 member1_series = member1 + member2 + member3 + member4 + member5
 
 
 #group member 2
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member1 = [ group_members[1], section, group, current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
+member1 = [ f'{group_members[1]} on {group_members[1]} ->', section, group, current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member2 = [ group_members[0], current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
+member2 = [ f'{group_members[0]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member3 = [ group_members[2], current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
+member3 = [ f'{group_members[2]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[3]]
-member4 = [ group_members[3], current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
+member4 = [ f'{group_members[3]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
+member5 = [ f'{group_members[4]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
 
 member2_series = member1 + member2 + member3 + member4 + member5
 
 
 #group member 3
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member1 = [ group_members[2], section, group, current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
+member1 = [ f'{group_members[2]} on {group_members[2]} ->', section, group, current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member2 = [ group_members[0], current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
+member2 = [ f'{group_members[0]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member3 = [ group_members[1], current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
+member3 = [ f'{group_members[1]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
  
 current_row = test_df.loc[test_df['name_1'] == group_members[3]]
-member4 = [ group_members[3], current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
+member4 = [ f'{group_members[3]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
+member5 = [ f'{group_members[4]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
 
 member3_series = member1 + member2 + member3 + member4 + member5
 
 
 #group member 4
 current_row = test_df.loc[test_df['name_1'] == group_members[3]]
-member1 = [ group_members[3], section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member1 = [ f'{group_members[3]} on {group_members[3]} ->', section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member2 = [ group_members[0], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member2 = [ f'{group_members[0]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member3 = [ group_members[1], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member3 = [ f'{group_members[1]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member4 = [ group_members[2], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member4 = [ f'{group_members[2]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
+member5 = [ f'{group_members[4]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
 
 member4_series = member1 + member2 + member3 + member4 + member5
 
 
 #group member 5
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member1 = [ group_members[4], section, group, current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
+member1 = [ f'{group_members[4]} on {group_members[4]} ->', section, group, current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[0]]
-member2 = [ group_members[0], current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
+member2 = [ f'{group_members[0]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[1]]
-member3 = [ group_members[1], current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
+member3 = [ f'{group_members[1]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[2]]
-member4 = [ group_members[2], current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
+member4 = [ f'{group_members[2]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
 
 current_row = test_df.loc[test_df['name_1'] == group_members[4]]
-member5 = [ group_members[4], current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
+member5 = [ f'{group_members[3]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem4_7'].values[0], current_row['mem5_8'].values[0] ]
 
 member5_series = member1 + member2 + member3 + member4 + member5
 
@@ -153,3 +159,4 @@ final_df = pd.DataFrame([member1_series, member2_series, member3_series, member4
                                  'Group Member', 'mem3_1', 'mem3_2', 'mem3_3', 'mem3_4', 'mem3_5', 'mem3_6', 'mem3_7', 'mem3_8', 
                                  'Group Member', 'mem4_1', 'mem4_2', 'mem4_3', 'mem4_4', 'mem4_5', 'mem4_6', 'mem4_7', 'mem4_8',
                                  'Group_member', 'mem5_1', 'mem5_2', 'mem5_3', 'mem5_4', 'mem5_5', 'mem5_6', 'mem5_7', 'mem5_8'])
+
