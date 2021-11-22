@@ -273,4 +273,6 @@ for dataframe in dfs:
 end_result = pd.concat(dataframe_holder)
     
 
+#export end result as csv file
+#end_result.to_csv('output file path goes here')
     
