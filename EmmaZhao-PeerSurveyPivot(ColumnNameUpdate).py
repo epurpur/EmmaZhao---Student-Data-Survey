@@ -45,7 +45,7 @@ df = pd.read_csv('/Users/ep9k/Desktop/EmmaZhao.csv')
 sections = df['Section'].unique()
 
 #get unique groups
-groups = df['Group'].unique()
+groups = df['GrpNo'].unique()
 
 
 
@@ -84,7 +84,7 @@ for dataframe in dfs:
         #make a list of group members, section, and group
         group_members = dataframe.iloc[1][-5:].tolist()
         section = dataframe['Section'].unique()[0] 
-        group = dataframe['Group'].unique()[0] 
+        group = dataframe['GrpNo'].unique()[0] 
     
     
         #group member 1
@@ -271,8 +271,6 @@ for dataframe in dfs:
 
 #at the end concatenate all dataframes in dataframe_holder into one large dataframe
 end_result = pd.concat(dataframe_holder)
-    
-    
     
 
     
