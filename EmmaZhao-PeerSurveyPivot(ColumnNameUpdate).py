@@ -272,5 +272,7 @@ for dataframe in dfs:
 #at the end concatenate all dataframes in dataframe_holder into one large dataframe
 end_result = pd.concat(dataframe_holder)
     
+#export end_result as csv file
+#end_result.to_csv('file path goes here')
 
     
