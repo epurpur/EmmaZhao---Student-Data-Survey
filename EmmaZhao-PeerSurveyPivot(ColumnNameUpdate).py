@@ -39,7 +39,7 @@ that students' responses will be filled with the value 'n/a'.
 import pandas as pd
 
 #read dataset
-df = pd.read_csv('/Users/ep9k/Desktop/EmmaZhao.csv')
+df = pd.read_csv(r'/Users/ep9k/Desktop/peereval.csv')
 
 #get unique sections
 sections = df['Section'].unique()
@@ -55,7 +55,7 @@ def create_df(section, group):
     #first make subset for section    
     temp_df = df.loc[df['Section'] == section]
     #then make subset for group in section
-    final_df = temp_df.loc[temp_df['Group'] == group]
+    final_df = temp_df.loc[temp_df['GrpNo'] == group]
     
     return final_df
 
@@ -272,7 +272,5 @@ for dataframe in dfs:
 #at the end concatenate all dataframes in dataframe_holder into one large dataframe
 end_result = pd.concat(dataframe_holder)
     
-#export end_result as csv file
-#end_result.to_csv('file path goes here')
 
     
