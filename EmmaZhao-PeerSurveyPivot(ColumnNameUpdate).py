@@ -41,11 +41,13 @@ import pandas as pd
 #read dataset
 df = pd.read_csv(r'/Users/ep9k/Desktop/peereval.csv')
 
-#get unique sections
+#get unique sections. Sorted into numerical order
 sections = df['Section'].unique()
+sections.sort()
 
-#get unique groups
+#get unique groups. Sorted into numerical order
 groups = df['GrpNo'].unique()
+groups.sort()
 
 
 
