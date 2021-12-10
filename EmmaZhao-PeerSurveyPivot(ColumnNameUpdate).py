@@ -95,169 +95,174 @@ for dataframe in dfs:
             member1 = [ f'{group_members[0]} on {group_members[0]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
         except:
             member1 = [ f'{group_members[0]} on {group_members[0]} ->', section, group, 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[1]]
         try:
             member2 = [ f'{group_members[1]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
         except:
             member2 = [ f'{group_members[1]} on {group_members[0]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[2]]
         try:
             member3 = [ f'{group_members[2]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
         except:
             member3 = [ f'{group_members[2]} on {group_members[0]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[3]]
         try:
             member4 = [ f'{group_members[3]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
         except:
             member4 = [ f'{group_members[3]} on {group_members[0]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[4]]
         try:
             member5 = [ f'{group_members[4]} on {group_members[0]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
         except:
             member5 = [ f'{group_members[4]} on {group_members[0]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         #combine all items in members list
         member1_series = member1 + member2 + member3 + member4 + member5
-
+        
+        
         #group member 2
         current_row = dataframe.loc[dataframe['ID'] == group_members[1]]
         try:
-            member1 = [ f'{group_members[1]} on {group_members[1]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member1 = [ f'{group_members[1]} on {group_members[1]} ->', section, group, current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
         except:
             member1 = [ f'{group_members[1]} on {group_members[1]} ->', section, group, 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[0]]
         try:
-            member2 = [ f'{group_members[0]} on {group_members[1]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member2 = [ f'{group_members[0]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
         except:
             member2 = [ f'{group_members[0]} on {group_members[1]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[2]]
         try:
-            member3 = [ f'{group_members[2]} on {group_members[1]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member3 = [ f'{group_members[2]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
         except:
             member3 = [ f'{group_members[2]} on {group_members[1]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[3]]
         try:
-            member4 = [ f'{group_members[3]} on {group_members[1]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member4 = [ f'{group_members[3]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
         except:
             member4 = [ f'{group_members[3]} on {group_members[1]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[4]]
         try:
-            member5 = [ f'{group_members[4]} on {group_members[1]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member5 = [ f'{group_members[4]} on {group_members[1]} ->', current_row['mem2_1'].values[0], current_row['mem2_2'].values[0], current_row['mem2_3'].values[0], current_row['mem2_4'].values[0], current_row['mem2_5'].values[0], current_row['mem2_6'].values[0], current_row['mem2_7'].values[0], current_row['mem2_8'].values[0] ]
         except:
             member5 = [ f'{group_members[4]} on {group_members[1]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-
+        
         #combine all items in members list
         member2_series = member1 + member2 + member3 + member4 + member5
-
+        
+        
         #group member 3
         current_row = dataframe.loc[dataframe['ID'] == group_members[2]]
         try:
-            member1 = [ f'{group_members[2]} on {group_members[2]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member1 = [ f'{group_members[2]} on {group_members[2]} ->', section, group, current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
         except:
             member1 = [ f'{group_members[2]} on {group_members[2]} ->', section, group, 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[0]]
         try:
-            member2 = [ f'{group_members[0]} on {group_members[2]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member2 = [ f'{group_members[0]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
         except:
             member2 = [ f'{group_members[0]} on {group_members[2]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[1]]
         try:
-            member3 = [ f'{group_members[1]} on {group_members[2]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member3 = [ f'{group_members[1]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
         except:
             member3 = [ f'{group_members[1]} on {group_members[2]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[3]]
         try:
-            member4 = [ f'{group_members[3]} on {group_members[2]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member4 = [ f'{group_members[3]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
         except:
             member4 = [ f'{group_members[3]} on {group_members[2]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
         
         current_row = dataframe.loc[dataframe['ID'] == group_members[4]]
         try:
-            member5 = [ f'{group_members[4]} on {group_members[2]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member5 = [ f'{group_members[4]} on {group_members[2]} ->', current_row['mem3_1'].values[0], current_row['mem3_2'].values[0], current_row['mem3_3'].values[0], current_row['mem3_4'].values[0], current_row['mem3_5'].values[0], current_row['mem3_6'].values[0], current_row['mem3_7'].values[0], current_row['mem3_8'].values[0] ]
         except:
             member5 = [ f'{group_members[4]} on {group_members[2]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         #combine all items in members list
         member3_series = member1 + member2 + member3 + member4 + member5
+        
         
         #group member 4
         current_row = dataframe.loc[dataframe['ID'] == group_members[3]]
         try:
-            member1 = [ f'{group_members[3]} on {group_members[3]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member1 = [ f'{group_members[3]} on {group_members[3]} ->', section, group, current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
         except:
             member1 = [ f'{group_members[3]} on {group_members[3]} ->', section, group, 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[0]]
         try:
-            member2 = [ f'{group_members[0]} on {group_members[3]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member2 = [ f'{group_members[0]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
         except:
             member2 = [ f'{group_members[0]} on {group_members[3]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[1]]
         try:
-            member3 = [ f'{group_members[1]} on {group_members[3]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member3 = [ f'{group_members[1]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
         except:
             member3 = [ f'{group_members[1]} on {group_members[3]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[2]]
         try:
-            member4 = [ f'{group_members[2]} on {group_members[3]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member4 = [ f'{group_members[2]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
         except:
             member4 = [ f'{group_members[2]} on {group_members[3]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
         
         current_row = dataframe.loc[dataframe['ID'] == group_members[4]]
         try:
-            member5 = [ f'{group_members[4]} on {group_members[3]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member5 = [ f'{group_members[4]} on {group_members[3]} ->', current_row['mem4_1'].values[0], current_row['mem4_2'].values[0], current_row['mem4_3'].values[0], current_row['mem4_4'].values[0], current_row['mem4_5'].values[0], current_row['mem4_6'].values[0], current_row['mem4_7'].values[0], current_row['mem4_8'].values[0] ]
         except:
             member5 = [ f'{group_members[4]} on {group_members[3]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         #combine all items in members list
         member4_series = member1 + member2 + member3 + member4 + member5
-
+        
+        
         #group member 5
         current_row = dataframe.loc[dataframe['ID'] == group_members[4]]
         try:
-            member1 = [ f'{group_members[4]} on {group_members[4]} ->', section, group, current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member1 = [ f'{group_members[4]} on {group_members[4]} ->', section, group, current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem5_7'].values[0], current_row['mem5_8'].values[0] ]
         except:
             member1 = [ f'{group_members[4]} on {group_members[4]} ->', section, group, 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
         
         current_row = dataframe.loc[dataframe['ID'] == group_members[0]]
         try:
-            member2 = [ f'{group_members[0]} on {group_members[4]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member2 = [ f'{group_members[0]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem5_7'].values[0], current_row['mem5_8'].values[0] ]
         except:
             member2 = [ f'{group_members[0]} on {group_members[4]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[1]]
         try:
-            member3 = [ f'{group_members[1]} on {group_members[4]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member3 = [ f'{group_members[1]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem5_7'].values[0], current_row['mem5_8'].values[0] ]
         except:
             member3 = [ f'{group_members[1]} on {group_members[4]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[2]]
         try:
-            member4 = [ f'{group_members[2]} on {group_members[4]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member4 = [ f'{group_members[2]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem5_7'].values[0], current_row['mem5_8'].values[0] ]
         except:
             member4 = [ f'{group_members[2]} on {group_members[4]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         current_row = dataframe.loc[dataframe['ID'] == group_members[3]]
         try:
-            member5 = [ f'{group_members[3]} on {group_members[4]} ->', current_row['mem1_1'].values[0], current_row['mem1_2'].values[0], current_row['mem1_3'].values[0], current_row['mem1_4'].values[0], current_row['mem1_5'].values[0], current_row['mem1_6'].values[0], current_row['mem1_7'].values[0], current_row['mem1_8'].values[0] ]
+            member5 = [ f'{group_members[3]} on {group_members[4]} ->', current_row['mem5_1'].values[0], current_row['mem5_2'].values[0], current_row['mem5_3'].values[0], current_row['mem5_4'].values[0], current_row['mem5_5'].values[0], current_row['mem5_6'].values[0], current_row['mem5_7'].values[0], current_row['mem5_8'].values[0] ]
         except:
             member5 = [ f'{group_members[3]} on {group_members[4]} ->', 'n/a','n/a','n/a','n/a','n/a','n/a','n/a','n/a']
-            
+        
         #combine all items in members list
         member5_series = member1 + member2 + member3 + member4 + member5
+
 
         # combine these into a dataframe for the whole group
         final_df = pd.DataFrame([member1_series, member2_series, member3_series, member4_series, member5_series],
